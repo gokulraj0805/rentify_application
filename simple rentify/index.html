@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rentify</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <center><h1>Rentify</h1></center>
+        <div id="registration-section">
+            <h2>Register</h2>
+            <!-- Registration form -->
+            <input type="text" id="first-name" placeholder="First Name">
+            <input type="text" id="last-name" placeholder="Last Name">
+            <input type="email" id="email" placeholder="Email">
+            <input type="text" id="phone" placeholder="Phone Number">
+            <select id="user-type">
+                <option value="">Select User Type</option>
+                <option value="seller">Seller</option>
+                <option value="buyer">Buyer</option>
+            </select>
+            <button onclick="registerUser()">Register</button>
+        </div>
+        <div id="seller-section" class="hidden">
+            <h2>Seller Dashboard</h2>
+            <!-- Form for posting properties -->
+            <input type="text" id="property-place" placeholder="Place">
+            <input type="text" id="property-area" placeholder="Area (sq ft)">
+            <input type="number" id="property-bedrooms" placeholder="Bedrooms">
+            <input type="number" id="property-bathrooms" placeholder="Bathrooms">
+            <input type="text" id="property-nearby" placeholder="price of the property in rupees">
+            <button onclick="postProperty()">Post Property</button>
+            <h3>Your Properties</h3>
+            <div id="seller-properties"></div>
+        </div>
+        <div id="buyer-section" class="hidden">
+            <h2>Buyer Dashboard</h2>
+            <h3>Available Properties</h3>
+            <div id="buyer-properties"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
